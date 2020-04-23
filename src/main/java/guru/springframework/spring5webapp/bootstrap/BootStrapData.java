@@ -25,10 +25,7 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Publisher publisher = new Publisher();
-        publisher.setName("SFG Publishing");
-        publisher.setCity("St Petersburg");
-        publisher.setState("Fl");
+        Publisher publisher = new Publisher("SFG Publishing", "15.Street, St-Petersburg, Fl, 06120");
 
         publisherRepository.save(publisher);
 
@@ -52,7 +49,7 @@ public class BootStrapData implements CommandLineRunner {
 
         Author nfk = new Author("Necip Fazıl", "Kısakürek");
         Book ovb = new Book("O ve Ben", "3457890683");
-        Publisher tms = new Publisher("Timaş", "istanbul Tr 34100");
+        Publisher tms = new Publisher("Timaş", "karaca sokak 5, Istanbul, Tr, 34100");
         nfk.getBooks().add(ovb);
         ovb.getAuthors().add(nfk);
         tms.getBooks().add(ovb);

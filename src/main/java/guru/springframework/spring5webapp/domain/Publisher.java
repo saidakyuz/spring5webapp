@@ -25,9 +25,9 @@ public class Publisher {
     public Publisher() {
     }
 
-    public Publisher(String name, String address) {
+    public Publisher(String name, String addressLine1) {
         this.name = name;
-        this.addressLine1 = address;
+        this.addressLine1 = addressLine1;
     }
 
     public Long getId() {
@@ -95,7 +95,6 @@ public class Publisher {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
-                ", books=" + books +
                 '}';
     }
 
