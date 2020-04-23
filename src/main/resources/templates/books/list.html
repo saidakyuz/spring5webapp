@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List Of Books</title>
 </head>
 <body>
 <h1>Book List</h1>
@@ -14,9 +14,10 @@
         <th>Publisher</th>
     </tr>
     <tr th:each="book : ${books}">
-        <td th:text="${book.id}">asdfghj</td>
-        <td th:text="${book.title}">asdfg</td>
-        <td th:text="${book.publisher.name}">as</td>
+        <td th:text="${book.id}"></td>
+        <td th:text="${book.title}"></td>
+        <!--         <td th:text="${book.publisher.name}"></td> -->
+        <!--         // TODO: 4/23/2020 Burad Error alıyorum : Exception evaluating SpringEL expression: "book.publisher.name"-->
     </tr>
 </table>
 
