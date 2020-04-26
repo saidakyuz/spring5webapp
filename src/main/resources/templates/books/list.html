@@ -16,8 +16,7 @@
     <tr th:each="book : ${books}">
         <td th:text="${book.id}"></td>
         <td th:text="${book.title}"></td>
-        <!--         <td th:text="${book.publisher.name}"></td> -->
-        <!--         // TODO: 4/23/2020 Burad Error alıyorum : Exception evaluating SpringEL expression: "book.publisher.name"-->
+        <td th:text="${book.publisher.name}"></td>
     </tr>
 </table>
 
